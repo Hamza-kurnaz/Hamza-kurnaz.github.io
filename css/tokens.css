@@ -1,0 +1,103 @@
+/* ==========================================================================
+   Design Tokens — "Developer Ink" system
+   Single source of truth for color, type, spacing, motion and layout scales.
+   Dark theme is the default; [data-theme="light"] overrides the color group.
+   ========================================================================== */
+
+:root {
+  /* Color — dark (default) */
+  --color-bg: #0b0d10;
+  --color-bg-elevated: #111419;
+  --color-surface: #151920;
+  --color-surface-hover: #1a1f27;
+  --color-text: #f3f5f7;
+  --color-text-secondary: #a2aab6;
+  --color-text-muted: #737d8b;
+  --color-border: rgba(231, 236, 242, 0.1);
+  --color-border-strong: rgba(231, 236, 242, 0.18);
+  --color-primary: #5b8def;
+  --color-primary-hover: #78a2f3;
+  --color-primary-soft: rgba(91, 141, 239, 0.14);
+  --color-accent: #e58a45;
+  --color-accent-soft: rgba(229, 138, 69, 0.13);
+  --color-success: #62a87c;
+  --color-shadow-rgb: 0, 0, 0;
+  --color-on-primary: #07101f;
+
+  /* Typography */
+  --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --text-xs: 0.72rem;
+  --text-sm: 0.85rem;
+  --text-base: 1rem;
+  --text-md: 1.12rem;
+  --text-lg: clamp(1.2rem, 2.2vw, 1.8rem);
+  --text-xl: clamp(2.25rem, 5vw, 4.5rem);
+  --text-2xl: clamp(2.5rem, 6vw, 5.3rem);
+  --text-hero: clamp(5.2rem, 8.5vw, 10rem);
+
+  /* Spacing scale */
+  --space-3xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1.25rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  --space-4xl: 7.5rem;
+
+  /* Radius */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-xl: 32px;
+  --radius-pill: 999px;
+
+  /* Borders */
+  --border-width: 1px;
+  --border-width-strong: 2px;
+
+  /* Shadows (dark) */
+  --shadow-sm: 0 8px 24px rgba(var(--color-shadow-rgb), 0.16);
+  --shadow-md: 0 20px 60px rgba(var(--color-shadow-rgb), 0.1);
+  --shadow-lg: 0 18px 50px rgba(var(--color-shadow-rgb), 0.24);
+
+  /* Motion */
+  --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-emphasized: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-instant: 120ms;
+  --duration-fast: 200ms;
+  --duration-normal: 260ms;
+  --duration-slow: 650ms;
+  --duration-hero: 900ms;
+  --duration-theme: 350ms;
+
+  /* Layout */
+  --container-max: 1180px;
+  --container-wide: 1320px;
+  --container-narrow: 720px;
+
+  /* Z-index layers */
+  --z-background: -2;
+  --z-canvas: -1;
+  --z-content: 1;
+  --z-header: 100;
+  --z-modal: 200;
+  --z-toast: 300;
+}
+
+[data-theme="light"] {
+  --color-bg: #f5f6f8;
+  --color-bg-elevated: #ffffff;
+  --color-surface: #eceff3;
+  --color-surface-hover: #e4e8ed;
+  --color-text: #13171d;
+  --color-text-secondary: #4c5664;
+  --color-text-muted: #737d8b;
+  --color-border: rgba(19, 23, 29, 0.1);
+  --color-border-strong: rgba(19, 23, 29, 0.18);
+  --color-shadow-rgb: 26, 31, 39;
+  --shadow-lg: 0 18px 50px rgba(26, 31, 39, 0.1);
+}

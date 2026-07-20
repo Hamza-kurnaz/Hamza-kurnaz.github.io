@@ -7,27 +7,32 @@
   <meta name="description" content="Hamza Kurnaz’ın yazılım geliştirme, siber güvenlik, veri bilimi, ERP, robotik kodlama ve teknik eğitim çalışmalarını içeren profesyonel portfolyosu.">
   <meta name="author" content="Hamza Kurnaz">
   <meta name="robots" content="index,follow">
-  <link rel="canonical" href="https://hamzakurnaz.dev/">
+  <link rel="canonical" href="https://hamza-kurnaz.github.io/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preload" as="image" href="assets/images/hamza-kurnaz-profile.webp" type="image/webp">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
   <title>Hamza Kurnaz | Software Developer, Cyber Security & Educator</title>
   <meta property="og:type" content="website">
   <meta property="og:title" content="Hamza Kurnaz | Software Developer">
   <meta property="og:description" content="Yazılım geliştirme, siber güvenlik, veri bilimi, ERP ve teknik eğitim çalışmalarım.">
-  <meta property="og:url" content="https://hamzakurnaz.dev/">
-  <meta property="og:image" content="https://hamzakurnaz.dev/assets/images/og-image.jpg">
+  <meta property="og:url" content="https://hamza-kurnaz.github.io/">
+  <meta property="og:image" content="https://hamza-kurnaz.github.io/assets/images/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Hamza Kurnaz | Software Developer">
   <meta name="twitter:description" content="Yazılım geliştirme, siber güvenlik ve teknik eğitim portfolyosu.">
-  <meta name="twitter:image" content="https://hamzakurnaz.dev/assets/images/og-image.jpg">
+  <meta name="twitter:image" content="https://hamza-kurnaz.github.io/assets/images/og-image.jpg">
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"Person",
     "name":"Hamza Kurnaz",
-    "url":"https://hamzakurnaz.dev/",
-    "image":"https://hamzakurnaz.dev/assets/images/hamza-kurnaz-profile.jpg",
+    "url":"https://hamza-kurnaz.github.io/",
+    "image":"https://hamza-kurnaz.github.io/assets/images/hamza-kurnaz-profile.jpg",
     "jobTitle":"Software Developer and Educator",
     "sameAs":["https://www.linkedin.com/in/hamzakurnaz/","https://github.com/Hamza-kurnaz"],
     "alumniOf":{"@type":"CollegeOrUniversity","name":"Aydın Adnan Menderes Üniversitesi"},
@@ -39,6 +44,7 @@
 <body>
   <a class="skip-link" href="#main">İçeriğe geç</a>
   <div class="ambient-grid" aria-hidden="true"></div>
+  <canvas id="ink-canvas" aria-hidden="true"></canvas>
 
   <header class="site-header" id="site-header">
     <div class="nav-shell">
@@ -47,6 +53,7 @@
         <a href="#hakkimda">Hakkımda</a><a href="#projeler">Projeler</a><a href="#deneyim">Deneyim</a><a href="#yetenekler">Yetkinlikler</a><a href="#egitim">Eğitim</a><a href="#iletisim">İletişim</a>
       </nav>
       <div class="nav-actions">
+        <button class="icon-button" id="motion-toggle" aria-pressed="false" aria-label="Hareketi kapat" title="Hareketi aç/kapat"><span aria-hidden="true">◆</span></button>
         <button class="icon-button" id="theme-toggle" aria-label="Temayı değiştir" title="Temayı değiştir"><span aria-hidden="true">◐</span></button>
         <a class="button button-small button-ghost desktop-cv" href="assets/cv/hamza-kurnaz-cv.pdf" download>CV</a>
         <button class="menu-button" id="menu-button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menüyü aç"><span></span><span></span></button>
@@ -69,8 +76,8 @@
         <div class="hero-actions">
           <a class="button button-primary" href="#projeler">Seçili projeler</a>
           <a class="button button-ghost" href="assets/cv/hamza-kurnaz-cv.pdf" download>CV’yi indir</a>
-          <a class="text-link" href="https://www.linkedin.com/in/hamzakurnaz/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-          <a class="text-link" href="https://github.com/Hamza-kurnaz" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a class="text-link" href="https://www.linkedin.com/in/hamzakurnaz/" target="_blank" rel="noopener noreferrer">LinkedIn <span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="text-link" href="https://github.com/Hamza-kurnaz" target="_blank" rel="noopener noreferrer">GitHub <span class="arrow" aria-hidden="true">↗</span></a>
         </div>
         <div class="availability"><span></span> Selected projects & collaborations</div>
       </div>
@@ -108,7 +115,7 @@
       <div class="section-heading reveal"><p class="section-kicker">02 / PROJELER</p><h2 id="projects-title" class="section-title">Gerçek problemlere yönelik projeler</h2></div>
       <div class="projects-grid">
         <article class="project featured reveal"><div class="project-number">01</div><div class="project-type">Business Systems</div><h3>ERP & İş Zekâsı Projesi</h3><p>İşletme yapısı, SWOT analizi, iş zekâsı altyapısı, performans ve bütçe yönetimi süreçlerini kapsayan; stok ve finansal süreçlerin ERP üzerinde modellendiği kapsamlı çalışma.</p><div class="project-meta"><span>ERP</span><span>İş Zekâsı</span><span>KPI</span><span>Süreç Analizi</span></div><ul><li>Problem: Dağınık operasyon ve karar süreçleri</li><li>Yaklaşım: Süreç analizi, KPI ve raporlama modeli</li><li>Çıktı: Dijitalleştirme ve verimlilik önerileri</li></ul></article>
-        <article class="project featured accent reveal" data-delay="80"><div class="project-number">02</div><div class="project-type">Data Science</div><h3>Kadın Cinayetlerinin Maliyete Duyarlı Sınıflandırma ile Analizi</h3><p>Türkiye’de kadına yönelik cinayet verilerinin WEKA ile ön işleme, özellik seçimi, maliyete duyarlı sınıflandırma ve model değerlendirme adımlarıyla incelendiği veri madenciliği çalışması.</p><div class="project-meta"><span>WEKA</span><span>Data Mining</span><span>Machine Learning</span></div><a class="text-link" href="https://www.linkedin.com/posts/hamzakurnaz_kadin-ci%CC%87nayetleri%CC%87ni%CC%87n-veri%CC%87-madenci%CC%87li%CC%87%C4%9Fi%CC%87-i%CC%87le-activity-7098649815772729345-9Bqr" target="_blank" rel="noopener noreferrer">Çalışmayı incele ↗</a></article>
+        <article class="project featured accent reveal" data-delay="80"><div class="project-number">02</div><div class="project-type">Data Science</div><h3>Kadın Cinayetlerinin Maliyete Duyarlı Sınıflandırma ile Analizi</h3><p>Türkiye’de kadına yönelik cinayet verilerinin WEKA ile ön işleme, özellik seçimi, maliyete duyarlı sınıflandırma ve model değerlendirme adımlarıyla incelendiği veri madenciliği çalışması.</p><div class="project-meta"><span>WEKA</span><span>Data Mining</span><span>Machine Learning</span></div><a class="text-link" href="https://www.linkedin.com/posts/hamzakurnaz_kadin-ci%CC%87nayetleri%CC%87ni%CC%87n-veri%CC%87-madenci%CC%87li%CC%87%C4%9Fi%CC%87-i%CC%87le-activity-7098649815772729345-9Bqr" target="_blank" rel="noopener noreferrer">Çalışmayı incele <span class="arrow" aria-hidden="true">↗</span></a></article>
         <article class="project reveal"><div class="project-number">03</div><div class="project-type">Simulation</div><h3>Yemekhane Süreç Simülasyonu</h3><p>Arena Simulation ile öğrenci yoğunluğu, servis süresi ve kuyruk uzunluğunun modellenmesi; darboğazların tespiti ve süreç iyileştirme önerileri.</p><div class="project-meta"><span>Arena</span><span>DES</span><span>Queue Theory</span></div></article>
         <article class="project reveal"><div class="project-number">04</div><div class="project-type">ERP</div><h3>Dolibarr ERP & Süreç Yönetimi</h3><p>Satış, stok, müşteri ve finans süreçlerinin Dolibarr üzerinde yapılandırılması; rol bazlı erişim kontrolü ve operasyonel raporlama.</p><div class="project-meta"><span>Dolibarr</span><span>RBAC</span><span>Reporting</span></div></article>
         <article class="project reveal"><div class="project-number">05</div><div class="project-type">Risk Analysis</div><h3>Monte Carlo Simülasyonu</h3><p>Rastgele değişkenler, olasılık dağılımları ve çoklu iterasyonlar üzerinden risk ve belirsizlik analizinin modellenmesi.</p><div class="project-meta"><span>Monte Carlo</span><span>Statistics</span><span>Risk</span></div></article>
@@ -118,7 +125,8 @@
 
     <section class="section section-card reveal" id="deneyim" aria-labelledby="experience-title">
       <div class="section-heading reveal"><p class="section-kicker">03 / DENEYİM</p><h2 id="experience-title" class="section-title">Teknik bilgi, uygulama ve eğitim deneyimi</h2></div>
-      <div class="timeline">
+      <div class="timeline" id="timeline">
+        <div class="timeline-progress" aria-hidden="true"></div>
         <article class="timeline-item reveal"><div class="timeline-date">Haz 2024 — Tem 2024</div><div><h3>Gönüllü Eğitmen</h3><p class="org">Mülteciler Derneği Kariyer Merkezi · Sultanbeyli Belediyesi</p><ul><li>Temel robotik, algoritma mantığı ve blok tabanlı kodlama eğitimleri verdim.</li><li>Teknolojiye erişimi sınırlı çocukların problem çözme ve takım çalışması becerilerini destekledim.</li></ul></div></article>
         <article class="timeline-item reveal"><div class="timeline-date">Ağu 2023 — Oca 2024</div><div><h3>Yazılım Geliştirme Eğitmeni</h3><p class="org">T3 Vakfı · Eyüp Deneyap Atölyesi</p><ul><li>C++, algoritma, temel yazılım mantığı ve temiz kod konularında eğitim verdim.</li><li>Proje tabanlı öğrenme ve birebir teknik mentorluk süreçlerini yürüttüm.</li></ul></div></article>
         <article class="timeline-item reveal"><div class="timeline-date">Ağu 2023 — Ara 2023</div><div><h3>Siber Güvenlik Eğitmeni</h3><p class="org">T3 Vakfı · Deneyap Atölyesi</p><ul><li>Ağ, uygulama ve veri güvenliği; IAM, OWASP Top 10 ve güvenli yazılım geliştirme eğitimleri verdim.</li><li>Öğrencilerimle Aydın İl Gençlik Merkezi proje şenliğinde birincilik elde ettik.</li></ul></div></article>
@@ -130,12 +138,12 @@
     <section class="section section-card reveal" id="yetenekler" aria-labelledby="skills-title">
       <div class="section-heading reveal"><p class="section-kicker">04 / YETKİNLİKLER</p><h2 id="skills-title" class="section-title">Kullandığım teknoloji ve yöntemler</h2></div>
       <div class="skills-grid">
-        <article class="skill-group reveal"><span>01</span><h3>Software Development</h3><p>Python · C++ · HTML · CSS · JavaScript · Web Development · Algorithms · Git · GitHub · Linux</p></article>
-        <article class="skill-group reveal"><span>02</span><h3>Data & Artificial Intelligence</h3><p>Data Mining · Data Analysis · Data Management · Data Modeling · Big Data · Machine Learning · Artificial Intelligence · WEKA</p></article>
-        <article class="skill-group reveal"><span>03</span><h3>Cyber Security</h3><p>Cyber Security · Penetration Testing · Network Security · Network Attacks · Web Security · IAM · Secure Software Development</p></article>
-        <article class="skill-group reveal"><span>04</span><h3>Business Systems</h3><p>ERP · Dolibarr · Business Intelligence · Digital Transformation · Software Project Management · Databases · Process Analysis</p></article>
-        <article class="skill-group reveal"><span>05</span><h3>Robotics</h3><p>Arduino · Robotics · Robotic Coding · Tinkercad · Sensor Integration · Electrical & Electronics</p></article>
-        <article class="skill-group reveal"><span>06</span><h3>Professional</h3><p>Technical Training · Mentoring · Jury Evaluation · Team Leadership · Project Coordination · Problem Solving · Analytical Thinking</p></article>
+        <article class="skill-group reveal"><span>01</span><h3>Software Development</h3><ul class="chip-list"><li class="chip">Python</li><li class="chip">C++</li><li class="chip">HTML</li><li class="chip">CSS</li><li class="chip">JavaScript</li><li class="chip">Web Development</li><li class="chip">Algorithms</li><li class="chip">Git</li><li class="chip">GitHub</li><li class="chip">Linux</li></ul></article>
+        <article class="skill-group reveal"><span>02</span><h3>Data & Artificial Intelligence</h3><ul class="chip-list"><li class="chip">Data Mining</li><li class="chip">Data Analysis</li><li class="chip">Data Management</li><li class="chip">Data Modeling</li><li class="chip">Big Data</li><li class="chip">Machine Learning</li><li class="chip">Artificial Intelligence</li><li class="chip">WEKA</li></ul></article>
+        <article class="skill-group reveal"><span>03</span><h3>Cyber Security</h3><ul class="chip-list"><li class="chip">Cyber Security</li><li class="chip">Penetration Testing</li><li class="chip">Network Security</li><li class="chip">Network Attacks</li><li class="chip">Web Security</li><li class="chip">IAM</li><li class="chip">Secure Software Development</li></ul></article>
+        <article class="skill-group reveal"><span>04</span><h3>Business Systems</h3><ul class="chip-list"><li class="chip">ERP</li><li class="chip">Dolibarr</li><li class="chip">Business Intelligence</li><li class="chip">Digital Transformation</li><li class="chip">Software Project Management</li><li class="chip">Databases</li><li class="chip">Process Analysis</li></ul></article>
+        <article class="skill-group reveal"><span>05</span><h3>Robotics</h3><ul class="chip-list"><li class="chip">Arduino</li><li class="chip">Robotics</li><li class="chip">Robotic Coding</li><li class="chip">Tinkercad</li><li class="chip">Sensor Integration</li><li class="chip">Electrical & Electronics</li></ul></article>
+        <article class="skill-group reveal"><span>06</span><h3>Professional</h3><ul class="chip-list"><li class="chip">Technical Training</li><li class="chip">Mentoring</li><li class="chip">Jury Evaluation</li><li class="chip">Team Leadership</li><li class="chip">Project Coordination</li><li class="chip">Problem Solving</li><li class="chip">Analytical Thinking</li></ul></article>
       </div>
     </section>
 
@@ -148,11 +156,12 @@
     </section>
 
     <section class="section reveal contact-section" id="iletisim" aria-labelledby="contact-title">
-      <div class="contact-panel reveal"><p class="section-kicker"><span></span> İLETİŞİM</p><h2 id="contact-title" class="section-title">Birlikte üretmek için iletişime geçin</h2><p class="section-intro">İstanbul, Sancaktepe merkezli çalışıyorum. En hızlı iletişim kanalı e-posta veya LinkedIn.</p><div class="contact-actions"><a class="button button-primary" href="mailto:kurnaz1.hmz34@gmail.com?subject=Proje%20veya%20iş%20birliği">E-posta gönder</a><a class="button button-ghost" href="https://www.linkedin.com/in/hamzakurnaz/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="button button-ghost" href="assets/cv/hamza-kurnaz-cv.pdf" download>CV’yi indir</a></div><a class="email-display" href="mailto:kurnaz1.hmz34@gmail.com">kurnaz1.hmz34@gmail.com</a></div>
+      <div class="contact-panel reveal"><p class="section-kicker"><span></span> İLETİŞİM</p><h2 id="contact-title" class="section-title">Birlikte üretmek için iletişime geçin</h2><p class="section-intro">İstanbul, Sancaktepe merkezli çalışıyorum. En hızlı iletişim kanalı e-posta veya LinkedIn.</p><div class="contact-actions"><a class="button button-primary" href="mailto:kurnaz1.hmz34@gmail.com?subject=Proje%20veya%20iş%20birliği">E-posta gönder</a><a class="button button-ghost" href="https://www.linkedin.com/in/hamzakurnaz/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="button button-ghost" href="assets/cv/hamza-kurnaz-cv.pdf" download>CV’yi indir</a></div><div class="email-row"><a class="email-display" href="mailto:kurnaz1.hmz34@gmail.com">kurnaz1.hmz34@gmail.com</a><button class="copy-button" id="copy-email" data-email="kurnaz1.hmz34@gmail.com" type="button">E-postayı kopyala</button></div></div>
     </section>
   </main>
 
-  <footer><div><a class="brand" href="#top"><span class="brand-mark">HK</span></a><p>© <span id="year"></span> Hamza Kurnaz. Tasarım ve geliştirme.</p></div><a href="#top">Başa dön ↑</a></footer>
-  <script src="app.js" defer></script>
+  <footer><div><a class="brand" href="#top"><span class="brand-mark">HK</span></a><p>© <span id="year"></span> Hamza Kurnaz. Tasarım ve geliştirme.</p></div><a class="text-link arrow-down" href="#top">Başa dön <span class="arrow" aria-hidden="true">↑</span></a></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>

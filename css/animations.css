@@ -1,0 +1,83 @@
+/* ==========================================================================
+   Animations — scroll reveal, motion-off overrides, view-transition hook
+   Reveal uses opacity + translate only (no blur), per motion guidelines:
+   content must never appear illegible while animating in.
+   ========================================================================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity var(--duration-slow) var(--ease-out-expo), transform var(--duration-slow) var(--ease-out-expo);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Theme switch — smooth color cross-fade, progressive enhancement.
+   Browsers without View Transitions still get the body transition in base.css. */
+@supports (view-transition-name: root) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: var(--duration-theme);
+  }
+}
+
+/* ---- Reduced motion: OS preference ---- */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .photo-frame img {
+    animation: none;
+  }
+
+  .timeline-progress {
+    transition: none;
+  }
+
+  .project:hover {
+    transform: none;
+  }
+
+  .project::before {
+    display: none;
+  }
+
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ---- Reduced motion: explicit in-app toggle (mirrors the block above) ---- */
+html.motion-off .reveal {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+html.motion-off .photo-frame img {
+  animation: none;
+}
+
+html.motion-off .timeline-progress {
+  transition: none;
+}
+
+html.motion-off .project:hover {
+  transform: none;
+}
+
+html.motion-off .project::before {
+  display: none;
+}
+
+html.motion-off * {
+  animation-duration: 0.01ms !important;
+  transition-duration: 0.01ms !important;
+}
