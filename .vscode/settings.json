@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^cd \"c:\\\\Users\\\\19320\\\\OneDrive - Aydin Adnan Menderes University\\\\Masaüstü\\\\hamza-kurnaz-portfolio\"; python -m http\\.server 8080$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}
